@@ -1,0 +1,123 @@
+.burning-edges {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.edge {
+  position: absolute;
+}
+
+.edge-top {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 60, 0, 0.25),
+    rgba(255, 60, 0, 0.08) 40%,
+    transparent
+  );
+  animation: edgePulse 3s ease-in-out infinite;
+}
+
+.edge-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(
+    to top,
+    rgba(255, 80, 0, 0.35),
+    rgba(255, 60, 0, 0.12) 50%,
+    transparent
+  );
+  animation: edgePulse 2.5s ease-in-out infinite 0.5s;
+}
+
+.edge-left {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 60, 0, 0.2),
+    rgba(255, 60, 0, 0.05) 40%,
+    transparent
+  );
+  animation: edgePulse 3.5s ease-in-out infinite 1s;
+}
+
+.edge-right {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  background: linear-gradient(
+    to left,
+    rgba(255, 60, 0, 0.2),
+    rgba(255, 60, 0, 0.05) 40%,
+    transparent
+  );
+  animation: edgePulse 3.2s ease-in-out infinite 0.8s;
+}
+
+.corner {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  filter: blur(30px);
+  animation: cornerGlow 2s ease-in-out infinite;
+}
+
+.corner-tl {
+  top: -30px;
+  left: -30px;
+  background: rgba(255, 80, 0, 0.3);
+}
+
+.corner-tr {
+  top: -30px;
+  right: -30px;
+  background: rgba(255, 60, 0, 0.3);
+  animation-delay: 0.5s;
+}
+
+.corner-bl {
+  bottom: -30px;
+  left: -30px;
+  background: rgba(255, 100, 0, 0.35);
+  animation-delay: 1s;
+}
+
+.corner-br {
+  bottom: -30px;
+  right: -30px;
+  background: rgba(255, 70, 0, 0.35);
+  animation-delay: 1.5s;
+}
+
+@keyframes edgePulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes cornerGlow {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.4); opacity: 1; }
+}
+
+/* Panic mode */
+.burning-edges.panic .edge-top { height: 150px; background: linear-gradient(to bottom, rgba(255,0,0,0.5), rgba(255,60,0,0.2) 50%, transparent); }
+.burning-edges.panic .edge-bottom { height: 200px; background: linear-gradient(to top, rgba(255,0,0,0.6), rgba(255,30,0,0.2) 60%, transparent); }
+.burning-edges.panic .edge-left { width: 120px; background: linear-gradient(to right, rgba(255,0,0,0.4), transparent); }
+.burning-edges.panic .edge-right { width: 120px; background: linear-gradient(to left, rgba(255,0,0,0.4), transparent); }
+.burning-edges.panic .corner { width: 200px; height: 200px; }
+.burning-edges.panic .edge,
+.burning-edges.panic .corner {
+  animation-duration: 0.5s;
+}

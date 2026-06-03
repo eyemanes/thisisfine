@@ -1,0 +1,49 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fire-orange: #ff6600;
+  --fire-red: #ff2200;
+  --fire-yellow: #ffcc00;
+  --fire-dark: #1a0500;
+  --ember: #ff4400;
+  --smoke: #2a1a0a;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--fire-dark);
+  color: #fff;
+  cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><text y='24' font-size='24'>🔥</text></svg>") 8 28, auto;
+}
+
+::selection {
+  background: var(--fire-orange);
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--fire-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--fire-red), var(--fire-orange));
+  border-radius: 4px;
+}
+
+button {
+  cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><text y='24' font-size='24'>👆</text></svg>") 8 0, pointer;
+}

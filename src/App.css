@@ -1,0 +1,156 @@
+.fire-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* App container */
+.app-container {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 50px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.pfp-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 102, 0, 0.6);
+  box-shadow: 0 0 30px rgba(255, 80, 0, 0.4),
+              0 0 60px rgba(255, 60, 0, 0.2);
+  margin-bottom: 12px;
+}
+
+.pfp-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tagline {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.1rem;
+  color: rgba(255, 200, 120, 0.6);
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+/* Banner section */
+.banner-section {
+  width: 100%;
+  max-width: 650px;
+  padding: 20px 20px 30px;
+}
+
+/* Token section */
+.token-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px 40px;
+}
+
+/* Vibes marquee */
+.vibes-section {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 80, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 80, 0, 0.1);
+}
+
+.vibes-marquee {
+  overflow: hidden;
+}
+
+.vibes-track {
+  display: flex;
+  white-space: nowrap;
+}
+
+.vibes-repeat {
+  font-family: 'Bangers', cursive;
+  font-size: 1.6rem;
+  color: rgba(255, 120, 0, 0.12);
+  letter-spacing: 6px;
+  padding-right: 20px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 40px 20px 24px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-flames {
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+  line-height: 1;
+  animation: footerFlicker 2s ease-in-out infinite;
+}
+
+@keyframes footerFlicker {
+  0%, 100% { opacity: 0.5; transform: scaleY(1); }
+  50% { opacity: 0.8; transform: scaleY(1.05); }
+}
+
+.footer-text {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 0.9rem;
+  color: rgba(255, 180, 100, 0.5);
+}
+
+.footer-sub {
+  font-size: 0.7rem;
+  color: rgba(255, 180, 100, 0.2);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero {
+    padding: 30px 16px 16px;
+  }
+
+  .pfp-wrapper {
+    width: 90px;
+    height: 90px;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .stats-row {
+    gap: 12px;
+  }
+
+  .stat-card, .temp-widget {
+    min-width: 140px;
+    padding: 16px 20px;
+  }
+
+  .vibes-repeat {
+    font-size: 1.2rem;
+  }
+}

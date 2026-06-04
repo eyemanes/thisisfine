@@ -50,6 +50,36 @@
   margin-top: 4px;
 }
 
+/* X Button */
+.x-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: all 0.25s;
+}
+
+.x-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 102, 0, 0.5);
+  color: #ffcc00;
+}
+
+.x-icon {
+  flex-shrink: 0;
+}
+
 /* Banner section */
 .banner-section {
   width: 100%;
@@ -111,6 +141,22 @@
 @keyframes footerFlicker {
   0%, 100% { opacity: 0.5; transform: scaleY(1); }
   50% { opacity: 0.8; transform: scaleY(1.05); }
+}
+
+.footer-x-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 200, 120, 0.45);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+
+.footer-x-link:hover {
+  color: #fff;
 }
 
 .footer-text {

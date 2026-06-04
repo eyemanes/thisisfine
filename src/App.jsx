@@ -43,6 +43,23 @@ export default function App() {
           >
             everything is on fire. this is fine.
           </motion.p>
+
+          <motion.a
+            href="https://x.com/thisisfineusdc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="x-button"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.8 }}
+            whileHover={{ scale: 1.08, boxShadow: '0 0 30px rgba(255,102,0,0.4)' }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <svg viewBox="0 0 24 24" className="x-icon" fill="currentColor" width="18" height="18">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            <span>Follow @thisisfineusdc</span>
+          </motion.a>
         </header>
 
         {/* Banner */}
@@ -92,6 +109,17 @@ export default function App() {
           <div className="footer-flames">
             {'🔥'.repeat(25)}
           </div>
+          <a
+            href="https://x.com/thisisfineusdc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-x-link"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            @thisisfineusdc
+          </a>
           <p className="footer-text">
             $FINE — when everything is on fire but you're still vibing
           </p>
